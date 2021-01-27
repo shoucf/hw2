@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="nav-container">
+        <a href="text.html">Text</a>
+        <a href="image.html">Image</a>
+        <a href="video.html">Video</a>
+        <a href="table.html">Table</a>
+        <a href="login.html">Email</a>
+    </div>
+</nav>
+
+<form class="login-container">
+    <div>
+        <label>Pig's Name: </label>
+        <div>
+            <input name="fn"/>
+        </div>
+    </div>
+    <div>
+        <label>Pig's Owner: </label>
+        <div>
+            <input name="ln"/>
+        </div>
+    </div>
+    <div>
+        <label>Pig Breed: </label>
+        <div>
+            <input type="radio" id="sc" name="pi" value="sc" checked>
+            <label for="sc">Ralphs Pig</label>
+        </div>
+
+        <div>
+            <input type="radio" id="gv" name="pi" value="gv">
+            <label for="gv">Costco Pig</label>
+        </div>
+
+        <div>
+            <input type="radio" id="tb" name="pi" value="tb">
+            <label for="tb">Peppa Pig</label>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Done"/>
+    </div>
+</form>
+
+</body>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+    nav {
+        width: 100vw;
+        background: #000;
+    }
+    .nav-container {
+        padding: 10px;
+    }
+    .nav-container > a {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .nav-container > a:hover{
+        background: #666;
+    }
+    input {
+
+    }
+    .login-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .login-container > div {
+    }
+    label {
+    }
+</style>
+</html>

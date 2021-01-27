@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="nav-container">
+        <a href="text.html">Text</a>
+        <a href="image.html">Image</a>
+        <a href="video.html">Video</a>
+        <a href="table.html">Table</a>
+        <a href="login.html">Email</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="title">Piggies Price</h1>
+    <table>
+        <tr>
+            <td style="font-weight: 800">Pig Name</td>
+            <td style="font-weight: 800">Pig Origin Country</td>
+            <td style="font-weight: 800">Price</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.peppapig.com/">Peppa Pig</a></td>
+            <td>Britain</td>
+            <td>$20/lbs</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.ralphs.com/pl/pork-roasts-tenderloins/0500600005?fulfillment=all">Ralphs Pig</a></td>
+            <td>United State</td>
+            <td>$1.99/lbs</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.costco.com/pork.html">Costco Pig</a></td>
+            <td>United State</td>
+            <td>$8.99/lbs</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+
+<style>
+    body {
+        margin: 0;
+    }
+    .title {
+        margin: 20px;
+    }
+    nav {
+        width: 100vw;
+        background: #000;
+    }
+    .nav-container {
+        padding: 10px;
+    }
+    .nav-container > a {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .nav-container > a:hover{
+        background: #666;
+    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    table {
+        width: calc(100vw - 40px);
+        margin: 20px;
+    }
+    table,
+    td {
+        padding: 5px;
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+</style>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div id="scrollshow" onclick="window.scrollTo(0,0)">
+    <div style="font-size: 40px; color: #fff; margin: auto; width: max-content; height: max-content">^</div>
+</div>
+<div id="overlay"></div>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="nav-container">
+        <a href="text.html">Text</a>
+        <a href="image.html">Image</a>
+        <a href="video.html">Video</a>
+        <a href="table.html">Table</a>
+        <a href="login.html">Email</a>
+    </div>
+</nav>
+<!--<div class="papa" style="display: flex;-->
+<!--  flex-direction: column;-->
+<!--  justify-content: center;">-->
+<div class="image-container">
+    <img class="grid-item" src="1.jpg" alt=""/>
+    <img class="grid-item" src="2.jpg" alt=""/>
+    <img class="grid-item" src="3.jpg" alt=""/>
+    <img class="grid-item" src="4.jpg" alt=""/>
+    <img class="grid-item" src="5.jpg" alt=""/>
+    <img class="grid-item" src="6.jpg" alt=""/>
+    <img class="grid-item" src="1.jpg" alt=""/>
+    <img class="grid-item" src="2.jpg" alt=""/>
+    <img class="grid-item" src="3.jpg" alt=""/>
+    <img class="grid-item" src="4.jpg" alt=""/>
+    <img class="grid-item" src="5.jpg" alt=""/>
+    <img class="grid-item" src="6.jpg" alt=""/>
+</div>
+<!--</div>-->
+</body>
+
+<style>
+    body {
+        margin: 0;
+    }
+    nav {
+        width: 100vw;
+        background: #000;
+    }
+    .nav-container {
+        padding: 10px;
+    }
+    .nav-container > a {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .nav-container > a:hover{
+        background: #666;
+    }
+    .image-container {
+        margin: auto auto;
+        width: calc(100% - 20px);
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+        grid-gap: 10px;
+    }
+    .image-container > img {
+        grid-auto-rows: auto;
+        padding: 0 30px;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+        height: 300px;
+        width: 300px;
+    }
+    #over-behind{
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.1;
+        display: none;
+    }
+    #overlay {
+        z-index: 100;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: max-content;
+        height: max-content;
+        text-align: center;
+        position: fixed;
+        display: none;
+    }
+    #scrollshow {
+        cursor: pointer;
+        z-index: 99;
+        bottom: 10px; right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: fixed;
+        display: none;
+        background: #000;
+    }
+</style>
+</html>

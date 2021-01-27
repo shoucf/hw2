@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="nav-container">
+
+        <a href="text.html">Text</a>
+        <a href="image.html">Image</a>
+        <a href="video.html">Video</a>
+        <a href="table.html">Table</a>
+        <a href="login.html">Email</a>
+    </div>
+</nav>
+
+<div class="login-container">
+
+    <div>
+        <label>Email: </label>
+        <div>
+            <input name="email"/>
+        </div>
+        <label id="con"></label>
+    </div>
+    <br>
+    <div>
+        <input onclick="submit()" type="submit" value="Submit"/>
+    </div>
+</div>
+</body>
+<script>
+    function submit() {
+        // https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+        let email = document.getElementsByName("email")[0].value;
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(String(email).toLowerCase())) {
+            document.getElementById("con").innerText = "Email successfully recorded";
+        } else {
+            document.getElementById("con").innerText = "Invalid email address";
+        }
+    }
+</script>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+    nav {
+        width: 100vw;
+        background: #000;
+    }
+    .nav-container {
+        padding: 10px;
+    }
+    .nav-container > a {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .nav-container > a:hover{
+        background: #666;
+    }
+    input {
+
+    }
+    .login-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .login-container > div {
+    }
+    label {
+    }
+</style>
+</html>
